@@ -412,6 +412,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 0}
   musicFadeSpeed: 1
+  globalThemeMusic: {fileID: 8300000, guid: 83db238d51665f24580bd7dda10545e6, type: 3}
+  playGlobalThemeOnStart: 1
+  ignoreRoomMusicChanges: 1
+  destroyOnScenes:
+  - MainMenu
   sfxSource: {fileID: 0}
 --- !u!4 &50813973
 Transform:
@@ -4017,7 +4022,7 @@ Transform:
   m_GameObject: {fileID: 440098503}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.2, y: -8.4, z: 0}
+  m_LocalPosition: {x: 32.2, y: -10.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4241,7 +4246,7 @@ Transform:
   m_GameObject: {fileID: 453865288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7, y: 0, z: 0}
+  m_LocalPosition: {x: 4.3, y: -11.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10686,8 +10691,8 @@ Transform:
   m_GameObject: {fileID: 1073768834}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 529.9, y: -40.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 529.9, y: -41.71, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1668678222}
@@ -10733,8 +10738,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.66, y: 9.86}
-    newSize: {x: 7.72, y: 11.03}
+    oldSize: {x: 2.76, y: 5.15}
+    newSize: {x: 2.76, y: 5.15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -10790,15 +10795,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3993290536436158096, guid: a1696b870510f5d42aeb798f5723e36c, type: 3}
+  m_Sprite: {fileID: 1304436265291663816, guid: 897551a2949e553448a8ddef22331cb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.72, y: 11.03}
+  m_Size: {x: 2.76, y: 5.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!114 &1073768840
 MonoBehaviour:
@@ -19031,7 +19036,7 @@ MonoBehaviour:
     portrait: {fileID: -1323775644, guid: 30a885ca62e87834da7c2ea4faf0bb07, type: 3}
     speakerName: "G\xF6kb\xF6r\xFC"
   - text: "Do\u011Fru cevap. \u015Eimdi beni takip et."
-    portrait: {fileID: -1336964543194316448, guid: dcacd733b0d473047a392186bc43b1f6, type: 3}
+    portrait: {fileID: -1323775644, guid: 67e953695ed680746b94b33a85afde16, type: 3}
     speakerName: "G\xF6kb\xF6r\xFC"
   - text: "Ate\u015F Tanr\u0131s\u0131\u2019n\u0131n gizli ma\u011Faras\u0131."
     portrait: {fileID: -1323775644, guid: 30a885ca62e87834da7c2ea4faf0bb07, type: 3}
@@ -20116,7 +20121,7 @@ Transform:
   m_GameObject: {fileID: 1861179095}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 7.5, z: 0}
+  m_LocalPosition: {x: 29.2, y: -11.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22580,7 +22585,7 @@ Transform:
   m_GameObject: {fileID: 2032958430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44, y: 14.7, z: 0}
+  m_LocalPosition: {x: 44, y: -11.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

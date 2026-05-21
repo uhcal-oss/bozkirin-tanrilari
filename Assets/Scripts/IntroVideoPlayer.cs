@@ -501,7 +501,7 @@ public class IntroVideoPlayer : MonoBehaviour
         {
             var keyboard = UnityEngine.InputSystem.Keyboard.current;
             var mouse = UnityEngine.InputSystem.Mouse.current;
-            if (keyboard != null && keyboard.spaceKey.wasPressedThisFrame) return true;
+            if (keyboard != null && (keyboard.spaceKey.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame || keyboard.enterKey.wasPressedThisFrame)) return true;
             if (mouse != null && mouse.leftButton.wasPressedThisFrame) return true;
         }
         catch (System.Exception)
@@ -512,7 +512,7 @@ public class IntroVideoPlayer : MonoBehaviour
 
         try
         {
-            if (Input.GetKeyDown(skipKey) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(skipKey) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0))
             {
                 return true;
             }

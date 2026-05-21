@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -7,6 +8,15 @@ public class AudioManager : MonoBehaviour
     [Header("Music Settings")]
     public AudioSource musicSource;
     public float musicFadeSpeed = 1.0f;
+    
+    [Header("Global Music (Full Game)")]
+    public AudioClip globalThemeMusic;
+    [Tooltip("If true, plays the Global Theme automatically when the game starts.")]
+    public bool playGlobalThemeOnStart = false;
+    [Tooltip("If true, ignores room music changes from doors or other scripts so the global theme never stops.")]
+    public bool ignoreRoomMusicChanges = false;
+    [Tooltip("Type the name of scenes where the AudioManager should destroy itself (like MainMenu) to stop the music.")]
+    public string[] destroyOnScenes = { "MainMenu" };
 
     [Header("SFX Settings")]
     public AudioSource sfxSource;
@@ -28,10 +38,42 @@ public class AudioManager : MonoBehaviour
         if (sfxSource == null) sfxSource = gameObject.AddComponent<AudioSource>();
 
         musicSource.loop = true;
+
+        if (playGlobalThemeOnStart && globalThemeMusic != null)
+        {
+            musicSource.clip = globalThemeMusic;
+            musicSource.volume = 0.5f; // Set to target volume instantly on startup
+            musicSource.Play();
+        }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (destroyOnScenes != null)
+        {
+            foreach (string stopScene in destroyOnScenes)
+            {
+                if (scene.name == stopScene)
+                {
+                    Debug.Log($"[AudioManager] Reached {stopScene}. Destroying Global Audio.");
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+        }
     }
 
     public void PlayMusic(AudioClip newClip)
     {
+        if (ignoreRoomMusicChanges) return; // Block track changes if we locked the global theme!
+        
         if (newClip == null) return;
         if (musicSource.clip == newClip) return; // Already playing this track
 

@@ -56,6 +56,9 @@ public class MainMenuController : MonoBehaviour
     {
         if(sfxSource != null && clickSound != null) sfxSource.PlayOneShot(clickSound);
         
+        // --- NEW GAME: WIPE PROGRESS ---
+        ClearSaveData();
+
         // Trigger Exit Animations
         foreach (var slide in FindObjectsByType<MenuSlideIn>(FindObjectsSortMode.None))
         {
@@ -79,6 +82,30 @@ public class MainMenuController : MonoBehaviour
 
         // Play the video and load scene index 1 when done
         videoPlayer.PlayVideoAndLoadScene(1);
+    }
+
+    private void ClearSaveData()
+    {
+        Debug.Log("[MainMenu] Starting New Game. Wiping old save data...");
+
+        // Wipe position and scene save
+        PlayerPrefs.DeleteKey("HasSave");
+        PlayerPrefs.DeleteKey("SaveX");
+        PlayerPrefs.DeleteKey("SaveY");
+        PlayerPrefs.DeleteKey("SaveZ");
+        PlayerPrefs.DeleteKey("SavedScene");
+
+        // Wipe Daily Activities & Timers
+        PlayerPrefs.DeleteKey("DailyInteractions");
+        PlayerPrefs.DeleteKey("ClassTimeState");
+
+        // Wipe Hearts
+        for (int i = 0; i < 10; i++)
+        {
+            PlayerPrefs.DeleteKey($"Heart_{i}");
+        }
+
+        PlayerPrefs.Save();
     }
 
     public void QuitGame()

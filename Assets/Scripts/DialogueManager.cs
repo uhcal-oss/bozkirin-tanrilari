@@ -118,7 +118,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.fontSize = 32;
         dialogueText.color = Color.white;
         dialogueText.alignment = TextAlignmentOptions.TopLeft;
-        dialogueText.enableWordWrapping = true;
+        dialogueText.textWrappingMode = TextWrappingModes.Normal;
         if (customFont != null) dialogueText.font = customFont;
     }
 
