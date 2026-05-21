@@ -15,6 +15,10 @@ public class DoorTeleport : MonoBehaviour
     [Header("Audio")]
     public AudioClip roomMusic; // Music to play when entering this room 
 
+    [Header("Events")]
+    [Tooltip("Triggered automatically when the teleport finishes fading in.")]
+    public UnityEngine.Events.UnityEvent onTeleportComplete;
+
     private bool isTeleporting = false;
 
     /// <summary>
@@ -108,6 +112,9 @@ public class DoorTeleport : MonoBehaviour
         if (p2 != null) p2.enabled = true;
 
         isTeleporting = false;
+
+        // Trigger completing event (e.g. for automatic dialogue)
+        onTeleportComplete?.Invoke();
     }
 
     Transform FindPlayer()

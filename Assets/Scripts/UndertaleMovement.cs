@@ -92,14 +92,32 @@ public class UndertaleMovement : MonoBehaviour
 
         if (isMoving)
         {
-            // DOMINANT AXIS CHECK: Prevents flickering on diagonal
-            if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
+            // Always prioritize horizontal animations since up/down might be missing
+            if (Mathf.Abs(moveInput.x) > 0.01f)
             {
                 currentDir = (moveInput.x > 0) ? Direction.Right : Direction.Left;
             }
-            else
+            else if (Mathf.Abs(moveInput.y) > 0.01f)
             {
-                currentDir = (moveInput.y > 0) ? Direction.Up : Direction.Down;
+                // Only moving vertically
+                bool hasUp = upSprites != null && upSprites.Length > 0;
+                bool hasDown = downSprites != null && downSprites.Length > 0;
+
+                if (moveInput.y > 0 && hasUp)
+                {
+                    currentDir = Direction.Up;
+                }
+                else if (moveInput.y < 0 && hasDown)
+                {
+                    currentDir = Direction.Down;
+                }
+                // If moving purely vertical but missing up/down sprites,
+                // just keep the current direction (Left or Right).
+                // If the game just started and direction was Up/Down initially, default to Right.
+                else if (currentDir == Direction.Up || currentDir == Direction.Down)
+                {
+                    currentDir = Direction.Right;
+                }
             }
         }
 

@@ -385,7 +385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Graphics
+  m_text: Grafikler
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controls
+  m_text: Kontroller
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
@@ -2000,7 +2000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back to main menu
+  m_text: Ana menuye don
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
@@ -2199,8 +2199,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8271133824928538612, guid: 10780b7631ae6c74799c4d1f3f9dfe0f, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -8429587021738234945, guid: a1c55d13116335a4ea91e8e0196bbfb3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3076,7 +3076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Audio
+  m_text: Ses
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}

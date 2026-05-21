@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems; // Added this!
+using UnityEngine.Video;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class MainMenuController : MonoBehaviour
     [Header("Settings")]
     public float transitionDelay = 0.5f; // Delay for animations to finish
     public int settingsSceneIndex = 2; // Default to build index 2 
+
+    [Header("Intro Video")]
+    public VideoClip introVideoClip;
+    [Tooltip("Relative path under Assets folder if VideoClip is not set, e.g. Video/Tailer.mp4")]
+    public string introVideoPath = "Video/Tailer.mp4";
 
     void Awake()
     {
@@ -59,7 +65,20 @@ public class MainMenuController : MonoBehaviour
         // Wait for animations (like cursor flash)
         yield return new WaitForSeconds(transitionDelay);
 
-        SceneManager.LoadScene(1); 
+        // Find or create IntroVideoPlayer
+        IntroVideoPlayer videoPlayer = FindAnyObjectByType<IntroVideoPlayer>();
+        if (videoPlayer == null)
+        {
+            GameObject vpObj = new GameObject("IntroVideoPlayerInstance");
+            videoPlayer = vpObj.AddComponent<IntroVideoPlayer>();
+        }
+
+        // Assign the video settings
+        videoPlayer.videoClip = introVideoClip;
+        videoPlayer.videoRelativePath = introVideoPath;
+
+        // Play the video and load scene index 1 when done
+        videoPlayer.PlayVideoAndLoadScene(1);
     }
 
     public void QuitGame()

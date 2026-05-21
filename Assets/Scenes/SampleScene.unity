@@ -119,100 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &60626192
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 60626193}
-  - component: {fileID: 60626195}
-  - component: {fileID: 60626194}
-  - component: {fileID: 60626196}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &60626193
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60626192}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 326194564}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: 125.3}
-  m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &60626194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60626192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -4054111720429725101, guid: 5b6cd5b16c8287d42ad17f12012cc7ff, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &60626195
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60626192}
-  m_CullTransparentMesh: 1
---- !u!114 &60626196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60626192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce89e2246d2f62f4ab5dc23581157382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuSlideIn
-  slideSpeed: 5
-  verticalOffset: 1000
-  animateOnStart: 1
-  delay: 0
-  useExplicitTarget: 0
-  explicitTargetPosition: {x: 0, y: 0}
 --- !u!1 &95667507
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Cikis
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
@@ -386,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -56, y: 294}
+  m_AnchoredPosition: {x: -234, y: 234}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172632962
@@ -409,7 +315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xD6tekiler"
+  m_text: BOZKIRIN TANRILARI
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
@@ -475,7 +381,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -116.50323, w: 0}
+  m_margin: {x: 0, y: 0, z: -515.85565, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -720,7 +626,6 @@ RectTransform:
   - {fileID: 1717740432}
   - {fileID: 193117196}
   - {fileID: 960746500}
-  - {fileID: 60626193}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -785,7 +690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Ayarlar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
@@ -1518,7 +1423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8271133824928538612, guid: 10780b7631ae6c74799c4d1f3f9dfe0f, type: 3}
+  m_Sprite: {fileID: -8429587021738234945, guid: a1c55d13116335a4ea91e8e0196bbfb3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6994,7 +6899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Basla
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
   m_sharedMaterial: {fileID: 5619628910991528518, guid: e0bf08f710dab22418411de26371f6d2, type: 2}
@@ -7188,6 +7093,8 @@ MonoBehaviour:
   firstSelectedButton: {fileID: 955616665}
   transitionDelay: 0.5
   settingsSceneIndex: 2
+  introVideoClip: {fileID: 32900000, guid: ace3b7b08fc9dd7469aca80efa4b074f, type: 3}
+  introVideoPath: Video/Tailer.mp4
 --- !u!4 &2137280921
 Transform:
   m_ObjectHideFlags: 0
